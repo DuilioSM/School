@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear estudiante</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/form.css" />
+  </head>
+  <body>
+    <form
+      class="form-container"
+      action="../php/datos_estudiante.php"
+      method="post"
+    >
+      <!--Opcion uno crea registros en la base de datos-->
+      <input type="hidden" name="opcion" value="1" />
+      <!--Colocar identificadores iguales a la escuela de la DBBDD-->
+
+      <div class="form-input_container">
+        <label class="form-input_text" for="nombre">Nombre</label>
+        <input
+          class="form-input_area"
+          type="text"
+          name="nombre"
+          id="nombre"
+          maxlength="20"
+          pattern="{A-Za-z}{1,20}"
+          required
+        />
+      </div>
+      <div class="form-input_container">
+        <label class="form-input_text" for="apellidos">Apellidos</label>
+        <input
+          class="form-input_area"
+          type="text"
+          name="apellidos"
+          id="apellidos"
+          maxlength="20"
+          pattern=""
+          required
+        /><br />
+      </div>
+      <div class="form-input_container">
+        <label class="form-input_text" for="id_carrera">Id Carrera</label>
+        <input
+          class="form-input_area"
+          type="number"
+          name="id_carrera"
+          id="id_carrera"
+          required
+        /><br />
+      </div>
+      <div class="form-input_container">
+        <label class="form-input_text" for="promedio">Promedio</label>
+        <input
+          class="form-input_area"
+          type="number"
+          name="number"
+          id="number"
+          required
+        /><br />
+      </div>
+      <div class="form-input_container">
+        <label class="form-input_text" for="estado">Estado</label>
+        <input
+          class="form-input_area"
+          type="text"
+          name="estado"
+          id="estado"
+          required
+        /><br />
+      </div>
+      <div class="form-input_container">
+        <label class="form-input_text" for="adeudo">Adeudo</label>
+        <input
+          class="form-input_area"
+          type="number"
+          name="adeudo"
+          id="adeudo"
+          required
+        /><br />
+      </div>
+      <div class="form-input_container">
+        <label class="form-input_text" for="foto">Foto</label>
+        <input type="file" name="foto" id="foto" required /><br />
+      </div>
+      <div class="form-button_container">
+        <input class="form-button_false" type="reset" value="Limpiar" />
+        <input class="form-button_true" type="submit" value="enviar" />
+      </div>
+    </form>
+  </body>
+</html>
